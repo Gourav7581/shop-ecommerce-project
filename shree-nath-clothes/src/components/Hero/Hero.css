@@ -1,0 +1,39 @@
+﻿.snc-cinema { position: relative; isolation: isolate; overflow: hidden; min-height: 560px; height: clamp(560px, 49vw, 740px); background: #210609; color: #fff9ec; --hero-x: 0px; --hero-y: 0px; }
+.snc-cinema__scene { position: absolute; inset: -16px; z-index: -3; background: url('/assets/images/banners/festival-banner-deity.jpg') center 42% / cover; transform: perspective(1400px) translate3d(var(--hero-x), var(--hero-y), 0) scale(1.04); transition: transform 1.1s cubic-bezier(.2,.7,.2,1); }
+.snc-cinema__video { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
+.snc-cinema__shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg,rgba(13,5,2,.86) 0%,rgba(20,6,2,.62) 29%,rgba(21,5,3,.07) 65%), linear-gradient(0deg,rgba(16,5,1,.94),transparent 27%,transparent 78%,rgba(18,2,4,.18)); }
+.snc-cinema__inner { position: relative; width: min(1280px, 89%); height: 100%; min-height: inherit; margin: auto; display: flex; flex-direction: column; justify-content: center; padding: 55px 0 110px; }
+.snc-cinema__copy { max-width: 560px; transform: perspective(1200px) translate3d(calc(var(--hero-x) * -.45),calc(var(--hero-y) * -.45),20px); transition: transform 1s ease; }
+.snc-cinema__mantra { font-family: var(--font-serif); font-size: 22px; color: #ebc66e; margin-bottom: 16px; letter-spacing: .06em; }
+.snc-cinema h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(40px,4.1vw,64px); font-weight: 500; line-height: 1.05; text-shadow: 0 3px 20px #160500; letter-spacing: -.025em; }
+.snc-cinema h1 span { font-size: 1.35em; }
+.snc-cinema h1 i { display: inline-block; color: #dfb76c; font-size: .65em; font-style: normal; margin-left: 8px; }
+.snc-cinema__description { font-size: 16px; line-height: 1.65; margin: 22px 0 25px; color: #fff9ee; max-width: 430px; }
+.snc-cinema__shop { display: inline-flex; align-items: center; justify-content: center; gap: 24px; padding: 13px 26px; border: 1px solid #ffe5a4; border-radius: 40px; background: linear-gradient(115deg,#f7d98c,#fff0be 55%,#d9b569); color: #321409; font-size: 14px; font-weight: 700; box-shadow: 0 6px 24px #13050055; transition: transform .25s, box-shadow .25s; }
+.snc-cinema__shop:hover { transform: translateY(-3px); box-shadow: 0 9px 30px #d7a44244; }
+.snc-cinema__benefits { position: absolute; bottom: 36px; left: 10%; right: 10%; display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+.snc-cinema__benefit { display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 13px; line-height: 1.45; }
+.snc-cinema__benefit + .snc-cinema__benefit { border-left: 1px solid #d7b36640; }
+.snc-cinema__benefit svg { color: #edc969; flex-shrink: 0; filter: drop-shadow(0 0 8px #e1a82433); }
+.snc-cinema__corner { position: absolute; top: 0; left: 0; width: 125px; height: 125px; object-fit: cover; opacity: .45; pointer-events: none; }
+.snc-cinema__feather { position: absolute; bottom: -28px; width: 120px; height: 180px; pointer-events: none; opacity: .8; filter: drop-shadow(0 5px 10px #100900); animation: snc-feather-sway 7s ease-in-out infinite alternate; transform-origin: bottom; }
+.snc-cinema__feather--left { left: -20px; rotate: -35deg; }
+.snc-cinema__feather--right { right: -20px; rotate: 35deg; scale: -1 1; }
+.snc-cinema__play { position: absolute; right: 18px; bottom: 18px; display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #e9c67c77; border-radius: 50%; background: #21060999; color: #f3d795; }
+.snc-cinema button:focus-visible { outline: 2px solid #ffe5a4; outline-offset: 5px; }
+@keyframes snc-feather-sway { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+@media (max-width: 800px) { .snc-cinema { height: 620px; } .snc-cinema__video { object-position: 62% center; } .snc-cinema__shade { background: linear-gradient(90deg,#100402d9,#10040265 65%,#10040222),linear-gradient(0deg,#100402f2,transparent 45%); } .snc-cinema__inner { width: 88%; } .snc-cinema__benefits { left: 0; right: 0; gap: 12px; } .snc-cinema__benefit { font-size: 11px; gap: 8px; } .snc-cinema__benefit svg { width: 24px; } }
+@media (max-width: 520px) { .snc-cinema { height: auto; min-height: 650px; } .snc-cinema__inner { min-height: 650px; padding: 70px 0 165px; justify-content: center; } .snc-cinema h1 { font-size: 39px; } .snc-cinema__mantra { font-size: 18px; } .snc-cinema__description { font-size: 14px; max-width: 290px; } .snc-cinema__desktop-break { display: none; } .snc-cinema__benefits { grid-template-columns: repeat(2,1fr); bottom: 36px; gap: 20px 8px; } .snc-cinema__benefit { justify-content: flex-start; padding-left: 12px; font-size: 12px; } .snc-cinema__benefit:nth-child(3) { border-left: 0; } .snc-cinema__feather { opacity: .45; width: 85px; } }
+@media (prefers-reduced-motion: reduce) { .snc-cinema *, .snc-cinema *::before { animation: none !important; transition: none !important; } .snc-cinema__scene,.snc-cinema__copy { transform: none; } }
+
+/* Reference-style gold seal badges over the bottom of the video. */
+.snc-cinema { flex-shrink: 0; }
+.snc-cinema__benefits { z-index: 2; bottom: 26px; gap: 0; padding: 16px 0; }
+.snc-cinema__benefits::before { content: ''; position: absolute; z-index: -1; inset: -18px -35px; background: radial-gradient(ellipse, rgba(17, 8, 2, .7), transparent 75%); pointer-events: none; }
+.snc-cinema__benefit { min-height: 50px; gap: 13px; padding: 0 18px; }
+.snc-cinema__benefit-label { color: #fff5df; font-size: 14px; font-weight: 500; line-height: 1.45; text-shadow: 0 2px 5px #080200; }
+.snc-cinema__badge { position: relative; display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 48px; color: #f0cf76; filter: drop-shadow(0 2px 6px #100600); }
+.snc-cinema__badge .snc-cinema__badge-outline { position: absolute; inset: 0; width: 48px; height: 48px; color: #edc969; }
+.snc-cinema__badge .snc-cinema__badge-symbol { width: 22px; height: 22px; color: #ffe6a0; }
+@media (max-width: 800px) { .snc-cinema__benefit { padding: 0 10px; gap: 8px; } .snc-cinema__benefit-label { font-size: 12px; } .snc-cinema__badge { scale: .85; width: 42px; flex-basis: 42px; } }
+@media (max-width: 520px) { .snc-cinema__benefits { bottom: 24px; row-gap: 14px; } .snc-cinema__benefit { justify-content: flex-start; padding: 0 8px; } .snc-cinema__benefit-label { font-size: 12px; } }

@@ -1,0 +1,31 @@
+﻿/* About Us: the existing devotional artwork, with an ivory editorial layout. */
+.snc-about-page { position: relative; isolation: isolate; overflow: hidden; background: #fcf6e8; color: #5c3f32; }
+.snc-about-hero { width: 100%; margin: 0; background: #63400f; }
+.snc-about-hero__img { display: block; width: 100%; height: auto; }
+.snc-about-accessible { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.snc-about-container { position: relative; z-index: 1; width: min(1000px,88%); margin: auto; padding: 48px 0 44px; }
+.snc-about-story { display: grid; grid-template-columns: .8fr 1.7fr; gap: 55px; align-items: start; margin-bottom: 36px; }
+.snc-about-eyebrow { display: block; color: #ad8446; font-size: 9px; font-weight: 600; letter-spacing: .16em; line-height: 1.6; margin-bottom: 11px; }
+.snc-about-story h2 { margin: 0 0 15px; font-family: Georgia,serif; font-size: 38px; font-weight: 500; color: #570b1a; line-height: 1.15; }
+.snc-about-story-intro > img { display: block; width: 145px; height: 16px; object-fit: contain; }
+.snc-about-story-body p { font-family: var(--font-sans); font-size: 14px; line-height: 1.95; margin: 0 0 16px; color: #806853; }
+.snc-about-story-body p:last-child { margin: 0; }
+.snc-about-values { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); padding: 27px 0 29px; margin-bottom: 38px; border-block: 1px solid #dcc49365; }
+.snc-about-value { text-align: center; padding: 0 22px; }
+.snc-about-value + .snc-about-value { border-left: 1px solid #dcc49365; }
+.snc-about-value-icon { position: relative; display: grid; place-items: center; width: 57px; height: 57px; margin: 0 auto 13px; border: 1px solid #d8b97b; border-radius: 50%; color: #7b2230; background: #fff9ed; outline: 1px solid #dfcda450; outline-offset: 4px; }
+.snc-about-value h3 { font: 18px Georgia,serif; color: #661925; margin: 0 0 7px; }
+.snc-about-value p { font-size: 10px; line-height: 1.7; color: #a0876a; margin: 0 auto; max-width: 190px; }
+.snc-about-darshan { margin: 0 auto; width: 100%; max-width: 900px; }
+.snc-about-darshan > img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 26px #7d3e0d12; }
+.snc-about-darshan figcaption { text-align: center; padding: 25px 0 0; }
+.snc-about-darshan blockquote { font: 25px Georgia,serif; font-style: italic; color: #6d1b28; line-height: 1.4; margin: 0 0 14px; }
+.snc-about-darshan figcaption img { width: 150px; height: 18px; object-fit: contain; }
+.snc-about-cta { display: flex; justify-content: center; margin-top: 20px; }
+.snc-about-cta button { display: inline-flex; align-items: center; justify-content: center; gap: 15px; padding: 12px 22px; border: 1px solid #be9751; border-radius: 25px; background: #570b1a; color: #fff2d5; font-family: inherit; font-size: 12px; transition: background .2s,transform .2s; }
+.snc-about-cta button:hover { background: #7d1d32; transform: translateY(-2px); }
+.snc-about-cta button:focus-visible { outline: 2px solid #be9751; outline-offset: 4px; }
+.snc-about-temple { position: absolute; bottom: -30px; right: -70px; width: 330px; height: 250px; opacity: .12; pointer-events: none; z-index: 0; }
+@media(max-width:700px) { .snc-about-container { padding: 30px 0 35px; width: 88%; } .snc-about-story { grid-template-columns: minmax(0,1fr); gap: 18px; margin-bottom: 27px; } .snc-about-eyebrow { font-size: 8px; margin-bottom: 8px; } .snc-about-story h2 { font-size: 30px; margin-bottom: 9px; } .snc-about-story-intro > img { width: 105px; height: 12px; } .snc-about-story-body p { font-size: 13px; line-height: 1.9; } .snc-about-values { margin-bottom: 28px; padding-block: 24px; } .snc-about-value { padding-inline: 9px; } .snc-about-value h3 { font-size: 14px; } .snc-about-value p { font-size: 9px; } .snc-about-value-icon { width: 46px; height: 46px; } .snc-about-value-icon svg { width: 22px; } .snc-about-darshan blockquote { font-size: 22px; } }
+@media(max-width:380px) { .snc-about-value h3 { font-size: 12px; } .snc-about-value { padding-inline: 6px; } .snc-about-value p { font-size: 8px; } .snc-about-darshan blockquote { font-size: 19px; } }
+@media(prefers-reduced-motion:reduce) { .snc-about-cta button { transition: none; } .snc-about-cta button:hover { transform: none; } }

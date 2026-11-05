@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Shree Nath Clothes - Product Gallery Styles
+   Strictly following approved Figma Design
+   ========================================================================== */
+
+.snc-pdp-gallery {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Vertical Thumbnail Column (Left)
+   -------------------------------------------------------------------------- */
+.snc-pdp-thumbs-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  width: 74px;
+}
+
+.snc-pdp-thumbs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.snc-pdp-thumb-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  border: 1.5px solid #e8decb;
+  background-color: #ffffff;
+  padding: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.22s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snc-pdp-thumb-btn:hover {
+  border-color: #b88a28;
+  transform: translateY(-1px);
+}
+
+.snc-pdp-thumb-btn.is-active {
+  border-color: #a17228;
+  box-shadow: 0 0 0 1px #a17228, 0 4px 10px rgba(161, 114, 40, 0.18);
+}
+
+.snc-pdp-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.snc-pdp-thumb-fallback {
+  font-size: 18px;
+  color: #c9a050;
+}
+
+.snc-pdp-thumb-down {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #dfd4bf;
+  background: #ffffff;
+  color: #7a6a5d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+.snc-pdp-thumb-down:hover {
+  background-color: #f7f2e7;
+  color: #3b0710;
+  border-color: #b88a28;
+}
+
+/* --------------------------------------------------------------------------
+   Main Large Image Box (Right of thumbnails)
+   -------------------------------------------------------------------------- */
+.snc-pdp-main-image-container {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border-radius: 10px;
+  border: 1px solid #ebe2d3;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(74, 14, 23, 0.04);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  cursor: crosshair;
+}
+
+.snc-pdp-main-image-viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snc-pdp-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, transform-origin;
+  user-select: none;
+}
+
+.snc-pdp-main-image.is-zoomed {
+  transform: scale(1.85);
+  transition: transform 0.05s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   "Hover to Zoom" Pill Overlay
+   -------------------------------------------------------------------------- */
+.snc-pdp-zoom-pill {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 185, 145, 0.7);
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(40, 20, 10, 0.08);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #4a382d;
+  text-transform: capitalize;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 2;
+}
+
+.snc-pdp-zoom-pill.is-active-zoom {
+  opacity: 0.45;
+  transform: translateX(-50%) scale(0.96);
+}
+
+.snc-pdp-zoom-icon {
+  color: #b88a28;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .snc-pdp-gallery {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .snc-pdp-thumbs-col {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .snc-pdp-thumbs-list {
+    flex-direction: row;
+    gap: 8px;
+    width: auto;
+  }
+
+  .snc-pdp-thumb-btn {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+  }
+
+  .snc-pdp-thumb-down {
+    display: none;
+  }
+
+  .snc-pdp-main-image-container {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+  }
+}
+

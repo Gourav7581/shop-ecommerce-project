@@ -1,0 +1,84 @@
+﻿/* Festival collection: portrait, editorial copy and three collection previews. */
+.snc-festival-section {
+  position: relative; isolation: isolate; width: 100%; min-height: 280px;
+  display: flex; align-items: center; overflow: hidden;
+  background: #35030c; color: #fff6dd; border: 0;
+}
+.snc-festival-portrait { position: absolute; inset: 0 auto 0 0; width: 31%; z-index: 0; }
+.snc-festival-portrait img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: 45% 52%;
+  mask-image: linear-gradient(90deg,#000 60%,rgba(0,0,0,.92) 74%,transparent 100%);
+}
+.snc-festival-container {
+  position: relative; z-index: 1; width: min(1400px,100%); margin: 0 auto;
+  padding: 34px 3% 34px 30%; display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; gap: 38px;
+}
+.snc-festival-copy { text-align: center; }
+.snc-festival-label {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  margin: 0 0 10px; color: #d6b574; font-family: var(--font-serif,Georgia,serif);
+  font-size: 12px; letter-spacing: .06em;
+}
+.snc-festival-heading {
+  font-family: Georgia,'Times New Roman',serif; font-size: clamp(28px,2.8vw,40px);
+  font-weight: 500; line-height: 1.12; color: #f2d994; margin: 0 0 14px; letter-spacing: -.02em;
+}
+.snc-festival-description { max-width: 355px; margin: 0 auto 21px; color: #e7d6c5; font-size: 12px; line-height: 1.8; text-wrap: pretty; }
+.snc-festival-linebreak { display: none; }
+.snc-festival-explore-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 17px;
+  min-height: 39px; padding: 9px 23px; background: #f3d997;
+  border: 1px solid #ffe9b5; border-radius: 30px; color: #3a160c; font-size: 12px; font-weight: 700;
+  box-shadow: 0 5px 16px #18000638; transition: background .2s,transform .2s,box-shadow .2s;
+}
+.snc-festival-explore-btn:hover { background: #ffe7ac; transform: translateY(-2px); box-shadow: 0 7px 20px #18000666; }
+.snc-festival-explore-btn svg { transition: transform .2s; }
+.snc-festival-explore-btn:hover svg { transform: translateX(3px); }
+.snc-festival-gallery { display: flex; align-items: center; gap: 12px; min-width: 0; width: 100%; max-width: 470px; margin-inline: auto; }
+.snc-festival-thumbnails { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; min-width: 0; flex: 1; }
+.snc-festival-thumbnail {
+  display: block; aspect-ratio: 4 / 5; overflow: hidden; padding: 0;
+  border: 1px solid #c7a15e; border-radius: 7px; background: #ecd7a5;
+  box-shadow: 0 8px 20px #16000555; transition: transform .25s,border-color .25s,box-shadow .25s;
+}
+.snc-festival-thumbnail img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.snc-festival-thumbnail:hover { transform: translateY(-5px); border-color: #ffe3a1; box-shadow: 0 12px 24px #14000488; }
+.snc-festival-gallery-arrow {
+  display: grid; place-items: center; width: 28px; height: 28px; flex: 0 0 28px;
+  border: 1px solid #cfaa6980; border-radius: 50%; color: #edcf8e; background: transparent; transition: background .2s,color .2s;
+}
+.snc-festival-gallery-arrow:hover { background: #f3d997; color: #35030c; }
+.snc-festival-ornament { position: absolute; top: 13px; right: 15px; width: 58px; height: 58px; object-fit: contain; opacity: .16; pointer-events: none; }
+.snc-festival-section button:focus-visible { outline: 2px solid #ffe7ac; outline-offset: 4px; }
+@media(min-width:1500px) { .snc-festival-portrait { width: calc((100% - 1400px) / 2 + 430px); } }
+@media(max-width:1050px) {
+  .snc-festival-section { min-height: 260px; }
+  .snc-festival-container { padding: 30px 2% 30px 29%; gap: 20px; }
+  .snc-festival-heading { font-size: 31px; }
+  .snc-festival-description { font-size: 11px; }
+  .snc-festival-gallery { gap: 8px; }
+  .snc-festival-thumbnails { gap: 8px; }
+  .snc-festival-gallery-arrow { width: 24px; height: 24px; flex-basis: 24px; }
+}
+@media(max-width:720px) {
+  .snc-festival-section { min-height: 390px; }
+  .snc-festival-portrait { width: 44%; }
+  .snc-festival-portrait img { object-position: 48% center; mask-image: linear-gradient(90deg,#000 50%,transparent); }
+  .snc-festival-container { grid-template-columns: minmax(0,1fr); padding: 30px 6% 30px 37%; gap: 25px; }
+  .snc-festival-heading { font-size: 30px; }
+  .snc-festival-description { margin-bottom: 16px; }
+  .snc-festival-gallery { max-width: 350px; }
+  .snc-festival-thumbnail { aspect-ratio: 4 / 5; }
+}
+@media(max-width:440px) {
+  .snc-festival-section { min-height: 400px; }
+  .snc-festival-portrait { width: 45%; opacity: .75; }
+  .snc-festival-container { padding: 30px 16px 30px 28%; gap: 23px; }
+  .snc-festival-heading { font-size: 27px; }
+  .snc-festival-label { font-size: 10px; }
+  .snc-festival-gallery { gap: 6px; }
+  .snc-festival-thumbnails { gap: 6px; }
+  .snc-festival-gallery-arrow { width: 23px; height: 23px; flex-basis: 23px; }
+}
+@media(prefers-reduced-motion:reduce) { .snc-festival-section button,.snc-festival-section svg { transition: none; } .snc-festival-section button:hover,.snc-festival-explore-btn:hover svg { transform: none; } }

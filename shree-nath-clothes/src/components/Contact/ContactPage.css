@@ -1,0 +1,52 @@
+﻿/* Contact page: ivory, royal maroon and antique gold. */
+.snc-contact-page { position: relative; overflow: hidden; background: #fcf6e8; color: #5b3f32; }
+.snc-contact-page .snc-contact-hero { position: relative; width: 100%; background: #643912; }
+.snc-contact-page .snc-contact-hero__img { display: block; width: 100%; height: auto; max-height: 480px; object-fit: cover; object-position: center; }
+.snc-contact-page .snc-contact-accessible { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.snc-contact-page .snc-contact-container { width: min(1000px,88%); margin: auto; padding: 45px 0 0; }
+.snc-contact-page .snc-contact-grid { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.2fr); gap: 70px; align-items: start; }
+.snc-contact-page .snc-contact-info-col { padding-top: 8px; }
+.snc-contact-page .snc-contact-eyebrow { color: #ae8449; font-size: 9px; letter-spacing: .18em; font-weight: 600; margin: 0 0 26px; }
+.snc-contact-page .snc-contact-block { margin-bottom: 25px; }
+.snc-contact-page .snc-contact-block__title { font-family: Georgia,serif; font-size: 20px; font-weight: 500; color: #601323; margin: 0 0 10px; }
+.snc-contact-page .snc-contact-block__text { font-size: 13px; line-height: 1.9; font-style: normal; color: #94785e; }
+.snc-contact-page .snc-contact-link { font-size: 13px; line-height: 1.8; color: #94785e; overflow-wrap: anywhere; text-underline-offset: 4px; }
+.snc-contact-page .snc-contact-link:hover { color: #681528; text-decoration: underline; }
+.snc-contact-page .snc-contact-socials-row { display: flex; gap: 10px; flex-wrap: wrap; padding-top: 3px; }
+.snc-contact-page .snc-contact-social-btn { display: grid; place-items: center; width: 30px; height: 30px; color: #fff0d4; background: #570b1a; border: 1px solid #c5a05f; border-radius: 50%; transition: transform .2s,background .2s; }
+.snc-contact-page .snc-contact-social-btn:nth-child(even) { background: transparent; color: #681528; }
+.snc-contact-page .snc-contact-social-btn svg { width: 14px; height: 14px; }
+.snc-contact-page .snc-contact-social-btn:hover { transform: translateY(-2px); background: #8a273a; color: #fff4dd; }
+.snc-contact-page .snc-contact-map-card { margin-top: 30px; padding-top: 22px; border-top: 1px solid #e0c99f70; }
+.snc-contact-page .snc-map-header { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #8d693f; margin-bottom: 12px; }
+.snc-contact-page .snc-map-placeholder-box { position: relative; overflow: hidden; background: #f7edda; border: 1px solid #e2ceaa; border-radius: 6px; }
+.snc-contact-page .snc-map-art-bg { display: grid; place-items: center; height: 92px; background-image: linear-gradient(#d6bd8a20 1px,transparent 1px),linear-gradient(90deg,#d6bd8a20 1px,transparent 1px); background-size: 23px 23px; }
+.snc-contact-page .snc-map-pulse-marker { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #d3b57b; background: #fff7e5; border-radius: 50%; color: #7d2434; }
+.snc-contact-page .snc-map-caption { padding: 12px; background: #fffbf2; }
+.snc-contact-page .snc-map-caption p { color: #9c8266; font-size: 10px; line-height: 1.7; margin: 0 0 6px; }
+.snc-contact-page .snc-map-ext-link { display: inline-flex; align-items: center; gap: 6px; color: #7d2434; font-size: 10px; }
+.snc-contact-page .snc-contact-form-col { border-left: 1px solid #dfc89e70; padding-left: 42px; min-width: 0; }
+.snc-contact-page .snc-form-card__title { font-family: Georgia,serif; font-size: 29px; font-weight: 500; color: #601323; margin: 0 0 10px; }
+.snc-contact-page .snc-contact-form-intro { color: #a0876c; font-size: 11px; line-height: 1.8; margin: 0 0 23px; }
+.snc-contact-page .snc-form-group { margin-bottom: 17px; }
+.snc-contact-page .snc-form-label { display: block; margin-bottom: 7px; color: #805d48; font-size: 11px; font-weight: 500; }
+.snc-contact-page .snc-required { color: #a5634b; }
+.snc-contact-page .snc-form-input,.snc-contact-page .snc-form-textarea { display: block; width: 100%; border: 1px solid #e0cfb1; border-radius: 4px; padding: 12px; background: #fffdf7; color: #5b2931; font-family: inherit; font-size: 12px; line-height: 1.6; transition: border-color .2s,box-shadow .2s; }
+.snc-contact-page .snc-form-input { height: 42px; }
+.snc-contact-page .snc-form-textarea { min-height: 130px; resize: vertical; }
+.snc-contact-page .snc-form-input::placeholder,.snc-contact-page .snc-form-textarea::placeholder { color: #baa78e; font-size: 11px; }
+.snc-contact-page .snc-form-input:focus,.snc-contact-page .snc-form-textarea:focus { outline: none; border-color: #b58e4d; box-shadow: 0 0 0 3px #c69a4120; }
+.snc-contact-page .snc-form-input.is-invalid,.snc-contact-page .snc-form-textarea.is-invalid { border-color: #b1515d; }
+.snc-contact-page .snc-form-error { display: block; margin-top: 5px; font-size: 10px; color: #a33349; }
+.snc-contact-page .snc-btn-send-message,.snc-contact-page .snc-btn-send-another { display: inline-flex; justify-content: center; align-items: center; gap: 12px; width: 100%; border: 1px solid #570b1a; border-radius: 4px; padding: 13px 20px; background: #570b1a; color: #fff1d8; font-family: inherit; font-size: 12px; transition: background .2s; }
+.snc-contact-page .snc-btn-send-message:hover:not(:disabled),.snc-contact-page .snc-btn-send-another:hover { background: #7e2035; }
+.snc-contact-page .snc-btn-send-message:disabled { opacity: .65; cursor: wait; }
+.snc-contact-page .snc-contact-success-state { padding: 35px 20px; text-align: center; background: #fffbf2; border: 1px solid #e0cfb1; border-radius: 6px; }
+.snc-contact-page .snc-success-icon-wrap { color: #9e793f; margin-bottom: 15px; }
+.snc-contact-page .snc-success-title { font: 24px Georgia,serif; color: #601323; margin: 0 0 12px; }
+.snc-contact-page .snc-success-desc { color: #9c8266; font-size: 12px; line-height: 1.8; margin-bottom: 22px; }
+.snc-contact-page a:focus-visible,.snc-contact-page button:focus-visible { outline: 2px solid #b58e4d; outline-offset: 4px; }
+@media(max-width:800px) { .snc-contact-page .snc-contact-grid { gap: 32px; } .snc-contact-page .snc-contact-form-col { padding-left: 26px; } .snc-contact-page .snc-form-card__title { font-size: 26px; } .snc-contact-page .snc-contact-hero__img { max-height: none; } }
+@media(max-width:550px) { .snc-contact-page .snc-contact-container { width: 89%; padding-top: 27px; } .snc-contact-page .snc-contact-grid { grid-template-columns: minmax(0,1fr); gap: 27px; } .snc-contact-page .snc-contact-info-col { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 15px; padding: 0; } .snc-contact-page .snc-contact-eyebrow { grid-column: 1 / -1; margin-bottom: 0; } .snc-contact-page .snc-contact-block { margin: 0; } .snc-contact-page .snc-contact-block__title { font-size: 18px; } .snc-contact-page .snc-contact-link,.snc-contact-page .snc-contact-block__text { font-size: 11px; } .snc-contact-page .snc-contact-map-card { grid-column: 1 / -1; margin-top: 0; padding-top: 17px; } .snc-contact-page .snc-contact-form-col { padding: 24px 0 0; border-left: 0; border-top: 1px solid #dfc89e70; } }
+@media(prefers-reduced-motion:reduce) { .snc-contact-page * { transition: none !important; } .snc-contact-page .snc-contact-social-btn:hover { transform: none; } }
+.snc-contact-page .snc-contact-container { padding-bottom: 35px; }

@@ -1,0 +1,80 @@
+/* Shop by Category - Ivory Theme Matching Approved Reference */
+
+.snc-categories-ivory-section {
+  position: relative;
+  padding: 2.5rem 1.5rem 1rem;
+  background: #faf7f0;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.snc-categories-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Header */
+.snc-categories-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.snc-cat-divider-wrapper {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.snc-ornamental-divider-img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.snc-categories-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  font-weight: 700;
+  color: #2b040c;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* 6 Items Row on Desktop */
+.snc-categories-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1080px) {
+  .snc-categories-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .snc-categories-ivory-section {
+    padding: 3rem 1rem 3.5rem;
+  }
+
+  .snc-categories-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem 1rem;
+  }
+
+  .snc-categories-header {
+    margin-bottom: 2rem;
+  }
+}

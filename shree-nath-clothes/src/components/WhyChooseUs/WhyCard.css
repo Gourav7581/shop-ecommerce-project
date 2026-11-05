@@ -1,0 +1,152 @@
+/* Why Choose Us Feature Card - Devotional Ivory & Antique Gold */
+
+.snc-why-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.4); /* Subtle Antique Gold Border */
+  border-radius: 12px;
+  padding: 2.5rem 1.75rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(43, 4, 12, 0.04);
+  transform-style: preserve-3d;
+  will-change: transform;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+
+  /* Staggered Scroll Reveal */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+  transition-delay: var(--card-delay, 0ms);
+}
+
+
+.snc-why-card:hover {
+  border-color: #dfb76c; /* Bright Antique Gold */
+  box-shadow: 0 14px 34px rgba(43, 4, 12, 0.1), 0 0 18px rgba(212, 175, 55, 0.22);
+}
+
+/* Icon Medallion */
+.snc-why-card__icon-box {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fffcf5 0%, #faf1dc 100%);
+  border: 1.2px solid rgba(212, 175, 55, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.16);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.snc-why-card:hover .snc-why-card__icon-box {
+  transform: scale(1.08);
+  border-color: #dfb76c;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+}
+
+.snc-why-card__icon-halo {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px dashed rgba(212, 175, 55, 0.35);
+  pointer-events: none;
+  animation: sncSpinHalo 24s linear infinite;
+}
+
+@keyframes sncSpinHalo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.snc-why-gold-icon {
+  color: #b88a28; /* Warm Antique Gold Line Icon */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.snc-why-card:hover .snc-why-gold-icon {
+  color: #8f6415;
+}
+
+/* Content Area */
+.snc-why-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.snc-why-card__tag {
+  font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #9e6f1a; /* Antique Gold Accent */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.snc-why-card__title {
+  font-family: var(--font-serif, 'Marcellus', serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b040c; /* Deep Maroon */
+  line-height: 1.3;
+  margin: 0 0 0.85rem 0;
+  transition: color 0.25s ease;
+}
+
+.snc-why-card:hover .snc-why-card__title {
+  color: #6e1020;
+}
+
+.snc-why-card__description {
+  font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.91rem;
+  line-height: 1.62;
+  color: #635348;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Footer Accent */
+.snc-why-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1.6rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(212, 175, 55, 0.2);
+}
+
+.snc-why-card__accent-line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+
+.snc-why-card__accent-gem {
+  color: #dfb76c;
+  font-size: 0.68rem;
+  transition: transform 0.3s ease;
+}
+
+.snc-why-card:hover .snc-why-card__accent-gem {
+  transform: rotate(45deg);
+}
+

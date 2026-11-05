@@ -1,0 +1,937 @@
+/* ==========================================================================
+   Shree Nath Clothes - Checkout Page Styles
+   Strictly following approved Figma reference
+   ========================================================================== */
+
+.snc-checkout-page {
+  background-color: #faf6ef;
+  min-height: calc(100vh - 140px);
+  color: #38271e;
+  font-family: 'Marcellus', 'Cinzel', Georgia, serif;
+  padding-bottom: 70px;
+}
+
+.snc-checkout-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 24px 60px 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Top Progress Stepper (1. Shipping -> 2. Payment -> 3. Review)
+   -------------------------------------------------------------------------- */
+.snc-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 580px;
+  margin: 0 auto 36px auto;
+  position: relative;
+}
+
+.snc-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+
+.snc-step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1.5px solid #c9bea9;
+  color: #7a6a5d;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.snc-step-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7a6a5d;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.snc-step-item.is-active .snc-step-circle {
+  background-color: #3b0710;
+  border-color: #3b0710;
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(59, 7, 16, 0.25);
+}
+
+.snc-step-item.is-active .snc-step-label {
+  color: #3b0710;
+  font-weight: 700;
+}
+
+.snc-step-item.is-completed .snc-step-circle {
+  background-color: #15803d;
+  border-color: #15803d;
+  color: #ffffff;
+}
+
+.snc-step-item.is-completed .snc-step-label {
+  color: #15803d;
+}
+
+.snc-step-divider {
+  flex: 1;
+  height: 1.5px;
+  background-color: #ded5c3;
+  margin: -20px 14px 0 14px;
+  z-index: 1;
+  transition: background-color 0.25s ease;
+}
+
+.snc-step-divider.is-completed {
+  background-color: #15803d;
+}
+
+/* --------------------------------------------------------------------------
+   Two-Column Grid Layout matching Figma
+   -------------------------------------------------------------------------- */
+.snc-checkout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: flex-start;
+}
+
+.snc-checkout-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.snc-checkout-right-col {
+  position: sticky;
+  top: 90px;
+}
+
+/* --------------------------------------------------------------------------
+   Left Section: Checkout Card (Shipping / Payment / Review)
+   -------------------------------------------------------------------------- */
+.snc-checkout-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1.5px solid #ded5c3;
+  padding: 32px 34px;
+  box-shadow: 0 3px 16px rgba(60, 20, 10, 0.03);
+}
+
+.snc-checkout-heading {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #271410;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.01em;
+}
+
+.snc-checkout-subdesc {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+  color: #6e5c4e;
+  margin: -10px 0 22px 0;
+  line-height: 1.5;
+}
+
+/* Form Groups & Inputs */
+.snc-form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.snc-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.snc-form-col {
+  margin-bottom: 18px;
+}
+
+.snc-form-col--blank {
+  visibility: hidden;
+}
+
+.snc-form-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #38271e;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.snc-required {
+  color: #c41824;
+}
+
+.snc-form-input,
+.snc-form-select,
+.snc-form-textarea {
+  width: 100%;
+  border: 1.5px solid #ded5c3;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: #271410;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.snc-form-input,
+.snc-form-select {
+  height: 42px;
+  padding: 0 14px;
+}
+
+.snc-form-textarea {
+  padding: 10px 14px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.snc-form-input:focus,
+.snc-form-select:focus,
+.snc-form-textarea:focus {
+  outline: none;
+  border-color: #a17228;
+  box-shadow: 0 0 0 2px rgba(161, 114, 40, 0.15);
+}
+
+.snc-form-input.is-invalid,
+.snc-form-select.is-invalid,
+.snc-form-textarea.is-invalid {
+  border-color: #dc2626;
+  background-color: #fffbfb;
+}
+
+.snc-form-error {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 5px;
+}
+
+/* Save Address Checkbox matching Figma */
+.snc-form-checkbox-wrap {
+  margin: 6px 0 24px 0;
+}
+
+.snc-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+  color: #4a382d;
+  cursor: pointer;
+  user-select: none;
+}
+
+.snc-custom-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #3b0710;
+  cursor: pointer;
+}
+
+/* Primary CTA Button matching Figma */
+.snc-btn-checkout-cta {
+  width: 100%;
+  padding: 14px 22px;
+  background-color: #3b0710;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(59, 7, 16, 0.22);
+  transition: all 0.22s ease;
+}
+
+.snc-btn-checkout-cta:hover {
+  background-color: #540c19;
+  box-shadow: 0 6px 18px rgba(59, 7, 16, 0.32);
+  transform: translateY(-1px);
+}
+
+.snc-btn-checkout-cta.is-loading {
+  opacity: 0.75;
+  cursor: wait;
+}
+
+.snc-btn-cta--flex {
+  flex: 1;
+}
+
+/* Return to Cart option */
+.snc-checkout-return-wrap {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.snc-return-link {
+  background: none;
+  border: none;
+  color: #5e4c3f;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.snc-return-link:hover {
+  color: #3b0710;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Step 2: Payment Method Choices
+   -------------------------------------------------------------------------- */
+.snc-payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.snc-payment-card {
+  border: 1.5px solid #ded5c3;
+  border-radius: 6px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.snc-payment-card:hover {
+  border-color: #a17228;
+  background-color: #fdfbf7;
+}
+
+.snc-payment-card.is-selected {
+  border-color: #3b0710;
+  background-color: #fffcf9;
+  box-shadow: 0 2px 8px rgba(59, 7, 16, 0.08);
+}
+
+.snc-payment-radio-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.snc-payment-radio-row input[type='radio'] {
+  accent-color: #3b0710;
+  width: 17px;
+  height: 17px;
+}
+
+.snc-payment-icon {
+  color: #a17228;
+}
+
+.snc-payment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.snc-payment-text strong {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: #271410;
+}
+
+.snc-payment-text span {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12.5px;
+  color: #746252;
+}
+
+.snc-payment-subbox {
+  padding: 12px 14px;
+  background-color: #f7f1e5;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.snc-subbox-note {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #7a6a5d;
+  display: block;
+  margin-top: 6px;
+}
+
+.snc-step-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.snc-btn-step-back {
+  padding: 13px 18px;
+  background: #ffffff;
+  border: 1.5px solid #ded5c3;
+  border-radius: 4px;
+  color: #4a382d;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.snc-btn-step-back:hover {
+  border-color: #3b0710;
+  color: #3b0710;
+}
+
+/* --------------------------------------------------------------------------
+   Step 3: Order Review Blocks
+   -------------------------------------------------------------------------- */
+.snc-review-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.snc-review-box {
+  background-color: #fdfbf7;
+  border: 1.5px solid #ebd9c2;
+  border-radius: 6px;
+  padding: 16px 18px;
+}
+
+.snc-review-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.snc-review-box-header h4 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #271410;
+  margin: 0;
+}
+
+.snc-edit-step-btn {
+  background: none;
+  border: none;
+  color: #a17228;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 6px;
+  text-decoration: underline;
+}
+
+.snc-review-recipient {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+  color: #271410;
+  margin: 0 0 4px 0;
+}
+
+.snc-review-address,
+.snc-review-method {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  color: #635245;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Right Section: Order Summary Card matching Figma
+   -------------------------------------------------------------------------- */
+.snc-checkout-summary-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1.5px solid #ded5c3;
+  padding: 28px 26px;
+  box-shadow: 0 3px 16px rgba(60, 20, 10, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.snc-summary-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #271410;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ebd9c2;
+}
+
+/* Products in Order Summary */
+.snc-summary-products-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.snc-summary-prod-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f2e9dc;
+}
+
+.snc-summary-prod-img-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  border: 1px solid #e8decb;
+  overflow: hidden;
+  background-color: #fbf8f2;
+  flex-shrink: 0;
+}
+
+.snc-summary-prod-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.snc-summary-prod-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.snc-summary-prod-name {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #271410;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.snc-summary-prod-sub {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12.5px;
+  color: #7a6a5d;
+}
+
+.snc-summary-prod-total {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #271410;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Financial Breakdown */
+.snc-summary-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.snc-breakdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+}
+
+.snc-breakdown-label {
+  color: #59483c;
+}
+
+.snc-breakdown-val {
+  font-weight: 600;
+  color: #271410;
+}
+
+.snc-breakdown-divider {
+  height: 1px;
+  background-color: #ebd9c2;
+  margin: 4px 0;
+}
+
+.snc-breakdown-row--total {
+  margin-top: 2px;
+}
+
+.snc-breakdown-total-label {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #271410;
+}
+
+.snc-breakdown-total-val {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #271410;
+  letter-spacing: 0.02em;
+}
+
+/* 100% Secure Checkout Box matching Figma */
+.snc-checkout-trust-box {
+  margin-top: 22px;
+  background-color: #fbf7ef;
+  border: 1px solid #ebd9c2;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.snc-trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.snc-trust-icon {
+  color: #3b0710;
+  flex-shrink: 0;
+}
+
+.snc-trust-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #271410;
+  display: block;
+}
+
+.snc-trust-sub {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #746252;
+  margin: 2px 0 0 0;
+}
+
+/* Payment Provider Badges matching Figma: VISA, Mastercard, UPI, RuPay */
+.snc-payment-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px dashed #ebd9c2;
+}
+
+.snc-pay-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #ded5c3;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  user-select: none;
+}
+
+.snc-pay-badge--visa {
+  color: #1a1f71;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.snc-pay-badge--mc {
+  padding: 0 8px;
+  gap: -4px;
+}
+
+.snc-mc-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.snc-mc-circle--red {
+  background-color: #eb001b;
+  margin-right: -5px;
+}
+
+.snc-mc-circle--orange {
+  background-color: #f79e1b;
+  opacity: 0.9;
+}
+
+.snc-pay-badge--upi {
+  letter-spacing: 0.04em;
+}
+
+.snc-upi-orange {
+  color: #f47920;
+}
+
+.snc-upi-blue {
+  color: #0f75bc;
+}
+
+.snc-pay-badge--rupay {
+  color: #0a4d91;
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Order Confirmed Celebratory Screen
+   -------------------------------------------------------------------------- */
+.snc-order-confirmed-card {
+  max-width: 640px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1.5px solid #ded5c3;
+  padding: 40px 36px;
+  box-shadow: 0 6px 24px rgba(60, 20, 10, 0.05);
+  text-align: center;
+}
+
+.snc-confirmed-icon-aura {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #fbf5ea;
+  border: 1.5px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.snc-gold-sparkle {
+  color: #b88a28;
+}
+
+.snc-confirmed-shloka {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: #a17228;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.snc-confirmed-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #271410;
+  margin: 0 0 10px 0;
+}
+
+.snc-confirmed-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: #635245;
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+}
+
+.snc-confirmed-details-box {
+  background-color: #fbf7ef;
+  border: 1px solid #ebd9c2;
+  border-radius: 6px;
+  padding: 18px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.snc-confirmed-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+}
+
+.snc-conf-label {
+  color: #746252;
+}
+
+.snc-conf-val {
+  font-weight: 600;
+  color: #271410;
+  text-align: right;
+  max-width: 320px;
+}
+
+.snc-conf-order-id {
+  color: #3b0710;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+}
+
+.snc-conf-total-row {
+  padding-top: 10px;
+  border-top: 1px dashed #ded5c3;
+  margin-top: 4px;
+}
+
+.snc-conf-total-val {
+  font-size: 16px;
+  color: #3b0710;
+}
+
+.snc-confirmed-blessing-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #fffcf5;
+  border: 1px solid #e5d8be;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 26px;
+  text-align: left;
+}
+
+.snc-bless-icon {
+  color: #b88a28;
+  flex-shrink: 0;
+}
+
+.snc-confirmed-blessing-box p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12.5px;
+  color: #6e5c4e;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.snc-confirmed-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.snc-btn-confirmed-shop {
+  flex: 1;
+  padding: 13px 20px;
+  background-color: #3b0710;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.snc-btn-confirmed-shop:hover {
+  background-color: #550d1a;
+}
+
+.snc-btn-confirmed-home {
+  padding: 13px 20px;
+  background-color: #ffffff;
+  color: #3b0710;
+  border: 1.5px solid #ded5c3;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.snc-btn-confirmed-home:hover {
+  border-color: #3b0710;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .snc-checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .snc-checkout-right-col {
+    position: static;
+  }
+
+  .snc-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .snc-form-col--blank {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .snc-checkout-card {
+    padding: 22px 18px;
+  }
+
+  .snc-stepper {
+    margin-bottom: 24px;
+  }
+
+  .snc-step-label {
+    font-size: 11px;
+  }
+
+  .snc-confirmed-actions {
+    flex-direction: column;
+  }
+}
+

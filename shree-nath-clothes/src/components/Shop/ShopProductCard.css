@@ -1,0 +1,25 @@
+﻿.snc-shop-card { min-width: 0; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #e7dac3; border-radius: 5px; background: #fffbf2; box-shadow: none; transition: box-shadow .25s,border-color .25s,transform .25s; }
+.snc-shop-card:hover { border-color: #c6a263; box-shadow: 0 9px 24px #4e230412; transform: translateY(-3px); }
+.snc-shop-card__img-box { position: relative; display: flex; width: 100%; aspect-ratio: 1 / 1; overflow: hidden; padding: 0; background: #f5eddb; }
+.snc-shop-card__img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.snc-shop-card:hover .snc-shop-card__img { transform: scale(1.035); }
+.snc-shop-card__badge { position: absolute; z-index: 1; left: 12px; top: 12px; border: 1px solid #d7b77770; border-radius: 4px; padding: 5px 9px; background: #4b0a18; color: #fff1d2; font-size: 9px; font-weight: 500; letter-spacing: .03em; }
+.snc-shop-card__view { position: absolute; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; border-radius: 25px; background: #fffaf0ed; color: #4b0a18; bottom: 12px; left: 50%; translate: -50% 5px; opacity: 0; font-size: 10px; white-space: nowrap; transition: opacity .2s,translate .2s; }
+.snc-shop-card__img-box:hover .snc-shop-card__view,.snc-shop-card__img-box:focus-visible .snc-shop-card__view { opacity: 1; translate: -50% 0; }
+.snc-shop-card__body { flex: 1; display: flex; flex-direction: column; padding: 14px; }
+.snc-shop-card__category { margin: 0 0 6px; text-transform: uppercase; font-size: 8px; font-weight: 600; letter-spacing: .13em; color: #ab854c; }
+.snc-shop-card__name { font-family: var(--font-serif,Georgia,serif); font-size: 16px; font-weight: 500; line-height: 1.4; color: #4b0a18; margin: 0 0 12px; }
+.snc-shop-card__name button { font: inherit; color: inherit; text-align: left; }
+.snc-shop-card__price-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 9px; margin: auto 0 16px; }
+.snc-shop-card__price { color: #4b0a18; font-size: 16px; font-weight: 700; }
+.snc-shop-card__original-price { font-size: 11px; color: #b1a18e; text-decoration: line-through; }
+.snc-shop-card__actions { display: flex; gap: 8px; }
+.snc-shop-card__cart-btn { flex: 1; min-width: 0; display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 39px; border: 1px solid #4b0a18; border-radius: 4px; background: #4b0a18; color: #fff3da; font-size: 11px; font-weight: 500; transition: background .2s; }
+.snc-shop-card__cart-btn:hover:not(:disabled) { background: #75132b; }
+.snc-shop-card__cart-btn.is-added { background: #3f6341; border-color: #3f6341; }
+.snc-shop-card__wishlist-btn { display: grid; place-items: center; flex: 0 0 39px; height: 39px; border: 1px solid #e5d6be; border-radius: 6px; background: #fffaf1; color: #a38a70; }
+.snc-shop-card__wishlist-btn.is-active { color: #991d36; border-color: #d3a0a9; background: #fff5f4; }
+.snc-shop-card__fallback { display: grid; place-items: center; width: 100%; padding: 25px; color: #9a7b4f; }
+@media(max-width:1100px) { .snc-shop-card__body { padding: 13px; } .snc-shop-card__name { font-size: 15px; } }
+@media(max-width:600px) { .snc-shop-card { border-radius: 8px; } .snc-shop-card__body { padding: 12px 10px; } .snc-shop-card__name { font-size: 13px; min-height: 36px; } .snc-shop-card__price { font-size: 14px; } .snc-shop-card__original-price { font-size: 10px; } .snc-shop-card__badge { left: 7px; top: 7px; font-size: 8px; padding: 4px 6px; } .snc-shop-card__cart-btn { gap: 4px; font-size: 10px; } .snc-shop-card__cart-btn svg { display: none; } .snc-shop-card__wishlist-btn { flex-basis: 34px; } .snc-shop-card__actions { gap: 5px; } }
+@media(prefers-reduced-motion:reduce) { .snc-shop-card,.snc-shop-card__img,.snc-shop-card__view,.snc-shop-card__cart-btn { transition: none; } .snc-shop-card:hover,.snc-shop-card:hover .snc-shop-card__img { transform: none; } }

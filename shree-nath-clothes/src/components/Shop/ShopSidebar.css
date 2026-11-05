@@ -1,0 +1,35 @@
+﻿.snc-shop-sidebar { flex: 0 0 245px; width: 245px; position: sticky; top: 100px; max-height: calc(100dvh - 120px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: #d9bd89 transparent; border: 0; border-right: 1px solid #dec79980; border-radius: 0; padding: 8px 23px 15px 0; background: transparent; }
+.snc-sidebar-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding-bottom: 17px; margin-bottom: 20px; border-bottom: 1px solid #e9ddc8; }
+.snc-filter-toggle { display: flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 600; color: #5d2630; text-align: left; }
+.snc-filter-toggle > span { background: #f2e6d1; padding: 2px 5px; border-radius: 4px; }
+.snc-filter-toggle-chevron { display: none; }
+.snc-reset-filters { font-size: 10px; color: #8a4a35; text-decoration: underline; text-underline-offset: 3px; }
+.snc-reset-filters:disabled { color: #b3a493; cursor: default; }
+.snc-sidebar-heading { font-family: Georgia,serif; font-size: 20px; font-weight: 500; color: #4b0a18; margin: 0 0 15px; }
+.snc-category-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 3px; }
+.snc-category-link { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px; border-radius: 6px; text-align: left; font-size: 11px; color: #7b6656; transition: background .2s,color .2s; }
+.snc-category-link:hover { background: #f5eddf; color: #4b0a18; }
+.snc-category-link.is-active { background: #4b0a18; color: #fff1d6; }
+.snc-category-count { min-width: 20px; text-align: center; padding: 1px 4px; border-radius: 4px; background: #b7915314; font-size: 10px; }
+.snc-category-link.is-active .snc-category-count { background: #ffffff1c; }
+.snc-sidebar-hr { height: 1px; background: #e9ddc8; margin: 22px 0; }
+.snc-filter-section { margin-bottom: 22px; }
+.snc-filter-subheading { color: #5b3032; font-size: 11px; font-weight: 600; margin: 0 0 12px; }
+.snc-checkbox-group { display: flex; flex-direction: column; gap: 11px; }
+.snc-checkbox-row { position: relative; display: flex; align-items: center; gap: 9px; cursor: pointer; }
+.snc-real-checkbox { position: absolute; opacity: 0; width: 17px; height: 17px; }
+.snc-custom-checkbox { width: 16px; height: 16px; border: 1px solid #d5c4a8; border-radius: 3px; background: #fffefa; flex-shrink: 0; display: grid; place-items: center; }
+.snc-real-checkbox:checked + .snc-custom-checkbox { background: #4b0a18; border-color: #4b0a18; }
+.snc-real-checkbox:checked + .snc-custom-checkbox::after { content: '✓'; color: #fff; font-size: 11px; }
+.snc-real-checkbox:focus-visible + .snc-custom-checkbox { outline: 2px solid #b88a28; outline-offset: 3px; }
+.snc-checkbox-label-text { font-size: 11px; color: #7b6656; }
+.snc-color-row { display: flex; flex-wrap: wrap; gap: 9px; padding: 3px; }
+.snc-color-dot { width: 21px; height: 21px; border: 2px solid #fff; box-shadow: 0 0 0 1px #c5b8a44d; border-radius: 50%; }
+.snc-color-dot.is-selected { outline: 2px solid #4b0a18; outline-offset: 2px; }
+.snc-filter-section--sort { margin-bottom: 0; }
+.snc-sort-box { position: relative; }
+.snc-sidebar-select { width: 100%; appearance: none; padding: 11px 28px 11px 11px; background: #fffefa; border: 1px solid #dfcfb2; border-radius: 6px; color: #5b3032; font-family: inherit; font-size: 11px; }
+.snc-select-chevron { position: absolute; right: 10px; top: 50%; translate: 0 -50%; color: #9a7751; pointer-events: none; }
+@media(max-width:1100px) { .snc-shop-sidebar { width: 220px; flex-basis: 220px; padding: 16px; } }
+@media(max-width:800px) { .snc-shop-sidebar { position: static; max-height: none; overflow: visible; width: 100%; flex-basis: auto; padding: 16px; border: 1px solid #dec79980; border-radius: 6px; } .snc-sidebar-top { margin: 0; padding: 0; border: 0; } .snc-filter-toggle { font-size: 12px; flex: 1; } .snc-filter-toggle-chevron { display: block; margin-left: auto; } .snc-reset-filters { margin-left: 12px; font-size: 11px; } .snc-sidebar-content { display: none; } .snc-shop-sidebar.is-expanded .snc-sidebar-content { display: block; margin-top: 22px; } .snc-shop-sidebar.is-expanded .snc-filter-toggle-chevron { rotate: 180deg; } .snc-category-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px; } .snc-filter-section { margin-bottom: 20px; } }
+@media(prefers-reduced-motion:reduce) { .snc-category-link { transition: none; } }

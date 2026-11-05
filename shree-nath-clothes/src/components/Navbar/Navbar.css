@@ -1,0 +1,29 @@
+﻿.snc-royal-header { position: sticky; top: 0; width: 100%; z-index: 1000; color: #f6e8c9; background: #35030c; border: 1px solid #b58b414f; box-shadow: 0 3px 18px #19000430; }
+.snc-royal-nav { width: min(1340px,94%); margin: auto; min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.snc-royal-brand { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.snc-royal-brand img { object-fit: contain; }
+.snc-royal-brand strong { display: block; font-family: Georgia,serif; font-size: 23px; font-weight: 500; color: #f1d58f; line-height: 1.2; }
+.snc-royal-brand small { display: block; color: #d8ba7e; font-family: var(--font-serif); font-size: 10px; letter-spacing: .04em; margin-top: 4px; }
+.snc-royal-links { display: flex; list-style: none; align-items: center; justify-content: center; gap: clamp(15px,2.2vw,34px); }
+.snc-royal-links a { display: block; position: relative; font-size: 12px; padding: 14px 0; white-space: nowrap; transition: color .2s; }
+.snc-royal-links a:hover,.snc-royal-links a[aria-current],.snc-royal-mobile a[aria-current] { color: #e5bd63; }
+.snc-royal-links a[aria-current]::after { content: ''; position: absolute; height: 1px; width: 20px; background: #dfb76c; bottom: 7px; left: 50%; translate: -50% 0; }
+.snc-royal-actions { display: flex; align-items: center; gap: 18px; }
+.snc-royal-search { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; background: #fcf9f2; border: 1px solid #e4d5b7; border-radius: 9px; color: #6a5b50; width: clamp(170px,20vw,280px); padding: 11px 13px; text-align: left; }
+.snc-royal-search span { font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.snc-royal-search svg { flex-shrink: 0; }
+.snc-royal-cart { position: relative; display: grid; place-items: center; color: #f5d589; width: 30px; height: 34px; }
+.snc-royal-cart span { position: absolute; top: 0; right: -3px; min-width: 13px; height: 13px; border-radius: 50%; background: #e7c36f; color: #35030c; font-size: 9px; line-height: 13px; font-weight: 700; }
+.snc-royal-wishlist { display: grid; place-items: center; color: #ebdcbf; }
+.snc-royal-toggle { display: none; color: #efcf8d; }
+.snc-royal-header a:focus-visible,.snc-royal-header button:focus-visible { outline: 2px solid #f4d384; outline-offset: 5px; }
+.snc-royal-mobile { background: #35050e; padding: 8px 5% 20px; border-top: 1px solid #b58b414f; }
+.snc-royal-mobile ul { list-style: none; }
+.snc-royal-mobile a { display: block; padding: 12px 0; border-bottom: 1px solid #dfb76c22; font-size: 14px; }
+@media(max-width:1100px) { .snc-royal-nav { gap: 18px; } .snc-royal-brand strong { font-size: 19px; } .snc-royal-actions { gap: 12px; } .snc-royal-search { width: 180px; } }
+@media(max-width:900px) { .snc-royal-links { display: none; } .snc-royal-toggle { display: grid; place-items: center; width: 32px; height: 36px; } .snc-royal-nav { min-height: 74px; } .snc-royal-search { width: 220px; } }
+@media(max-width:600px) { .snc-royal-nav { width: 93%; min-height: 70px; gap: 8px; } .snc-royal-brand { gap: 5px; } .snc-royal-brand img { width: 35px; height: 40px; } .snc-royal-brand strong { font-size: 17px; } .snc-royal-brand small { font-size: 8px; } .snc-royal-search { width: 30px; padding: 0; border: 0; background: transparent; color: #eddbb4; justify-content: center; height: 34px; } .snc-royal-search span,.snc-royal-wishlist { display: none; } .snc-royal-actions { gap: 7px; } }
+@media(prefers-reduced-motion:reduce) { .snc-royal-header * { transition: none !important; } }
+
+/* Shared icon color used by the existing search and cart overlays. */
+.snc-gold-icon { color: var(--gold-base); }

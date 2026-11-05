@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <rect width="520" height="100" rx="10" fill="#3B0710"/>
+  <g transform="translate(10 4) scale(.72)">
+    <path d="M60 12C49 28 43 39 43 51c0 12 7 19 17 19s17-7 17-19C77 39 71 28 60 12Z" stroke="#E4BD66" stroke-width="3" fill="none"/>
+    <path d="M43 51C29 42 20 43 13 51c10 15 19 20 33 17M77 51c14-9 23-8 30 0-10 15-19 20-33 17M60 70c-16 0-29 10-35 24 12-3 22-1 35 12 13-13 23-15 35-12C89 80 76 70 60 70Z" stroke="#E4BD66" stroke-width="3" fill="none" stroke-linejoin="round"/>
+    <path d="M60 80v26M49 88l11 8 11-8" stroke="#E4BD66" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="60" cy="49" r="5" fill="#E4BD66"/>
+  </g>
+  <text x="105" y="46" fill="#F4D88B" font-family="Georgia,serif" font-size="29" font-weight="bold">Shree Nath Clothes</text>
+  <text x="107" y="72" fill="#FFF2D7" font-family="Arial,sans-serif" font-size="15">Shringar for Your Thakur Ji</text>
+</svg>

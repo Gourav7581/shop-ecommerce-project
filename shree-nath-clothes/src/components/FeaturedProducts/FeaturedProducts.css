@@ -1,0 +1,16 @@
+﻿/* Compact ivory collection, matching the supplied storefront reference. */
+.snc-featured-ivory-section { position: relative; padding: 34px 4% 38px; background: #fbf8ef; border-bottom: 1px solid #d8bc773d; }
+.snc-featured-container { width: 100%; max-width: 1280px; margin: 0 auto; }
+.snc-featured-header { position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; min-height: 60px; }
+.snc-featured-title-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 155px; gap: 7px; }
+.snc-featured-subtitle { margin: 0; color: #807162; font-size: 12px; line-height: 1.6; }
+.snc-view-all-link { position: absolute; right: 0; display: inline-flex; align-items: center; gap: 7px; color: #6b302b; font-size: 11px; padding: 8px 0; text-underline-offset: 5px; }
+.snc-view-all-link:hover { color: #35030c; text-decoration: underline; }
+.snc-view-all-arrow { width: 14px; }
+.snc-ref-products-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 17px; }
+.snc-product-grid-item { min-width: 0; }
+.snc-view-all-link:focus-visible { outline: 2px solid #b88a28; outline-offset: 4px; }
+@media(max-width:1000px) { .snc-ref-products-grid { gap: 12px; } .snc-featured-ivory-section { padding-inline: 3%; } }
+@media(max-width:800px) { .snc-ref-products-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; } .snc-featured-title-wrap { padding: 0; } .snc-featured-header { flex-direction: column; gap: 8px; margin-bottom: 20px; } .snc-view-all-link { position: static; } }
+@media(max-width:520px) { .snc-featured-ivory-section { padding: 28px 16px; } .snc-ref-products-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; } .snc-featured-subtitle { font-size: 11px; } }
+@media(max-width:340px) { .snc-ref-products-grid { grid-template-columns: minmax(0,1fr); } }

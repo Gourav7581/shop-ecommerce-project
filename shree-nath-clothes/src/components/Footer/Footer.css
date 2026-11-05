@@ -1,0 +1,47 @@
+﻿/* Royal ivory footer with silk curves and antique gold accents. */
+.snc-footer-maroon { position: relative; isolation: isolate; overflow: hidden; background: #fcf4e5; color: #4d352d; padding: 0; }
+.snc-footer-silk { position: absolute; top: 0; left: 0; width: 65%; height: 90px; pointer-events: none; }
+.snc-footer-container { position: relative; z-index: 1; width: min(1390px,91%); margin: auto; padding: 100px 0 65px; }
+.snc-footer-grid { display: grid; grid-template-columns: 1.3fr .8fr 1fr 1.55fr; gap: 0; align-items: start; }
+.snc-footer-col { min-width: 0; padding: 12px 30px; }
+.snc-footer-col--brand { padding: 0 35px 0 0; text-align: center; }
+.snc-footer-brand-header { display: flex; flex-direction: column; align-items: center; gap: 9px; margin-bottom: 20px; }
+.snc-footer-logo-mark { width: 66px; height: 70px; }
+.snc-footer-mark-img { width: 100%; height: 100%; object-fit: contain; }
+.snc-footer-brand-text { display: flex; flex-direction: column; gap: 8px; }
+.snc-footer-brand-name { font-family: Georgia,serif; font-size: clamp(24px,2.3vw,34px); font-weight: 600; line-height: 1.2; color: #570716; letter-spacing: -.025em; }
+.snc-footer-brand-sub { font-family: Georgia,serif; font-style: italic; font-size: 16px; color: #7c2430; }
+.snc-footer-about-text { max-width: 320px; margin: 0 auto 23px; font-size: 13px; line-height: 1.8; color: #655449; }
+.snc-footer-socials { display: flex; justify-content: center; gap: 13px; }
+.snc-social-btn { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid #c9a15b; border-radius: 50%; background: #590315; color: #fff4df; transition: transform .2s,background .2s; }
+.snc-social-btn svg { width: 16px; height: 16px; }
+.snc-social-btn:hover { background: #8b1931; transform: translateY(-3px); }
+.snc-footer-grid > nav { border-left: 1px solid #d9b67570; min-height: 250px; }
+.snc-footer-heading { position: relative; display: flex; align-items: center; gap: 12px; margin: 0 0 35px; color: #590315; font-family: Georgia,serif; font-size: 23px; font-weight: 600; line-height: 1.2; }
+.snc-footer-grid > nav .snc-footer-heading::after { content: ''; position: absolute; left: 0; bottom: -20px; width: 125px; height: 13px; background: url('/assets/decor/ornamental-divider.svg') center / contain no-repeat; }
+.snc-footer-list { display: flex; flex-direction: column; gap: 14px; list-style: none; padding: 0; margin: 0; }
+.snc-footer-list a { display: flex; align-items: baseline; gap: 11px; color: #4d302a; font-size: 14px; line-height: 1.5; text-decoration: none; text-underline-offset: 4px; }
+.snc-footer-list a::before { content: '›'; font-family: Georgia,serif; color: #b2762c; font-size: 24px; line-height: 16px; }
+.snc-footer-list a:hover { color: #9a263d; text-decoration: underline; }
+.snc-footer-col--newsletter { position: relative; align-self: center; margin: 0 0 35px 20px; padding: 25px 23px 30px; border: 1px solid #d4ac6780; border-radius: 22px; background: #fffaf055; box-shadow: 0 8px 20px #ae74200b; }
+.snc-footer-col--newsletter::after { content: ''; position: absolute; width: 140px; height: 23px; left: 50%; bottom: -12px; transform: translateX(-50%); background: #fcf4e5 url('/assets/decor/ornamental-divider.svg') center / contain no-repeat; }
+.snc-footer-col--newsletter .snc-footer-heading { margin-bottom: 14px; font-size: 29px; font-weight: 500; }
+.snc-footer-heading > svg { color: #69071c; flex-shrink: 0; }
+.snc-footer-newsletter-text { margin: 0 0 22px; font-size: 13px; line-height: 1.7; color: #655044; }
+.snc-footer-form { display: flex; align-items: stretch; gap: 0; padding: 2px; border: 1px solid #c8a46c; border-radius: 30px; background: #fffdf7; }
+.snc-input-wrapper { min-width: 0; flex: 1; display: flex; align-items: center; gap: 9px; padding-left: 12px; }
+.snc-input-wrapper > svg { flex-shrink: 0; color: #7e1c30; }
+.snc-footer-input { width: 100%; min-width: 0; height: 43px; border: 0; background: transparent; padding: 8px 3px; color: #4c2730; font-family: inherit; font-size: 11px; outline-offset: -3px; }
+.snc-footer-input::placeholder { color: #9b8777; }
+.snc-footer-sub-btn { display: inline-flex; justify-content: center; align-items: center; gap: 5px; padding: 10px 15px; border: 1px solid #d2ab62; border-radius: 26px; background: #590315; color: #fff7e5; font-family: Georgia,serif; font-size: 14px; transition: background .2s; }
+.snc-footer-sub-btn:hover:not(:disabled) { background: #811a30; }
+.snc-footer-sub-btn.is-subscribed { background: #41603f; }
+.snc-footer-devotion { position: absolute; left: 0; right: 0; bottom: -65px; text-align: center; margin: 0; font-family: Georgia,serif; font-size: 15px; color: #69071c; }
+.snc-footer-devotion svg { vertical-align: middle; margin-left: 5px; }
+.snc-footer-decoration { position: absolute; width: 330px; height: 350px; right: -70px; bottom: 90px; opacity: .18; pointer-events: none; }
+.snc-footer-feather { position: absolute; z-index: 0; width: 150px; height: 240px; bottom: 50px; left: -45px; rotate: -32deg; opacity: .7; pointer-events: none; }
+.snc-footer-maroon a:focus-visible,.snc-footer-maroon button:focus-visible,.snc-footer-maroon input:focus-visible { outline: 2px solid #bb842e; outline-offset: 3px; }
+@media(max-width:1150px) { .snc-footer-col { padding-inline: 20px; } .snc-footer-col--brand { padding-left: 0; } .snc-footer-heading { font-size: 20px; } .snc-footer-list a { font-size: 12px; } .snc-footer-col--newsletter { margin-left: 10px; padding: 23px 15px 28px; } .snc-input-wrapper { padding-left: 8px; gap: 4px; } .snc-input-wrapper > svg { display: none; } .snc-footer-sub-btn { padding-inline: 10px; font-size: 12px; } }
+@media(max-width:900px) { .snc-footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 35px 20px; } .snc-footer-col--brand { grid-column: 1 / -1; padding: 0; } .snc-footer-brand-header { flex-direction: row; justify-content: center; } .snc-footer-brand-name { font-size: 30px; } .snc-footer-about-text { max-width: 440px; } .snc-footer-grid > nav { border: 0; padding: 0 15%; min-height: 0; } .snc-footer-col--newsletter { grid-column: 1 / -1; width: min(450px,100%); justify-self: center; margin: 5px 0 30px; padding: 25px; } .snc-footer-input { font-size: 12px; } .snc-footer-container { padding-top: 85px; padding-bottom: 60px; } .snc-footer-heading { font-size: 23px; } .snc-footer-list a { font-size: 14px; } }
+@media(max-width:480px) { .snc-footer-silk { width: 100%; height: 65px; } .snc-footer-brand-header { flex-direction: column; } .snc-footer-brand-name { font-size: 28px; } .snc-footer-brand-sub { font-size: 15px; } .snc-footer-grid { gap: 30px 12px; } .snc-footer-grid > nav { padding: 0 5px; } .snc-footer-heading { font-size: 21px; } .snc-footer-list a { font-size: 13px; gap: 7px; } .snc-footer-col--newsletter { padding: 22px 16px 25px; } .snc-footer-sub-btn { padding-inline: 11px; } .snc-footer-feather { opacity: .3; } }
+@media(prefers-reduced-motion:reduce) { .snc-footer-maroon * { transition: none !important; } .snc-social-btn:hover { transform: none; } }

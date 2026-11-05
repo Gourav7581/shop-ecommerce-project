@@ -1,0 +1,300 @@
+/* Temple Sanctum Showcase Styles */
+
+.snc-sanctum-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  perspective: 1200px;
+  user-select: none;
+}
+
+.snc-sanctum-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 460 / 580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 20px;
+}
+
+/* Background Rotating Sacred Mandala */
+.snc-sanctum__mandala-layer {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%) translateZ(-30px);
+  width: 88%;
+  height: 88%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snc-mandala-svg {
+  width: 100%;
+  height: 100%;
+  animation: sncMandalaSpin 60s infinite linear;
+}
+
+@keyframes sncMandalaSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ambient Backlight Bloom behind the shrine */
+.snc-sanctum__glow-bloom {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(-20px);
+  width: 78%;
+  height: 65%;
+  background: radial-gradient(circle, rgba(235, 192, 85, 0.35) 0%, rgba(120, 19, 38, 0.45) 50%, transparent 75%);
+  filter: blur(28px);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sncBloomPulse 4s infinite alternate ease-in-out;
+  z-index: 1;
+}
+
+@keyframes sncBloomPulse {
+  0% { transform: translate(-50%, -50%) translateZ(-20px) scale(0.9); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) translateZ(-20px) scale(1.15); opacity: 1; }
+}
+
+/* Temple Hanging Bells */
+.snc-temple-bell {
+  position: absolute;
+  top: 14%;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: top center;
+  animation: sncBellSway 3.6s infinite ease-in-out;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7));
+}
+
+.snc-temple-bell--left {
+  left: 10%;
+  animation-delay: 0.2s;
+}
+
+.snc-temple-bell--right {
+  right: 10%;
+  animation-delay: 1.4s;
+}
+
+.snc-bell-chain {
+  width: 2px;
+  height: 48px;
+  background: repeating-linear-gradient(to bottom, #d4af37 0px, #d4af37 3px, #4a3206 3px, #4a3206 6px);
+}
+
+.snc-bell-svg {
+  width: 32px;
+  height: 40px;
+}
+
+@keyframes sncBellSway {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(5deg); }
+  70% { transform: rotate(-5deg); }
+}
+
+/* Temple Archway (Jharokha) */
+.snc-sanctum__arch {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85));
+}
+
+.snc-arch-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Centerpiece Elements */
+.snc-sanctum__centerpiece {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  transform: translateZ(35px);
+  pointer-events: none;
+}
+
+/* Tilak */
+.snc-shrine-tilak {
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 94px;
+  filter: drop-shadow(0 0 10px rgba(248, 228, 165, 0.6));
+  animation: sncFloatTilak 4s infinite alternate ease-in-out;
+}
+
+.snc-tilak-svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes sncFloatTilak {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(-6px); }
+}
+
+/* Mor Pankh */
+.snc-shrine-feather {
+  position: absolute;
+  top: 23%;
+  left: 51%;
+  transform: translateX(-50%) rotate(10deg);
+  width: 140px;
+  height: 190px;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 14px rgba(2, 28, 59, 0.4));
+  animation: sncFeatherSway 5s infinite alternate ease-in-out;
+}
+
+.snc-feather-svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes sncFeatherSway {
+  0% { transform: translateX(-50%) rotate(7deg) scale(0.98); }
+  100% { transform: translateX(-50%) rotate(13deg) scale(1.02); }
+}
+
+/* Bansuri */
+.snc-shrine-bansuri {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-12deg);
+  width: 250px;
+  height: 60px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
+  animation: sncBansuriTilt 6s infinite alternate ease-in-out;
+}
+
+.snc-bansuri-svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes sncBansuriTilt {
+  0% { transform: translateX(-50%) rotate(-14deg) translateY(0); }
+  100% { transform: translateX(-50%) rotate(-10deg) translateY(-4px); }
+}
+
+/* Poshaak & Moti Haar */
+.snc-shrine-poshaak {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 160px;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.85));
+}
+
+.snc-poshaak-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Diyas on the Altar */
+.snc-sanctum__diya {
+  position: absolute;
+  bottom: 8%;
+  z-index: 20;
+  transform: translateZ(50px);
+}
+
+.snc-sanctum__diya--left {
+  left: 2%;
+}
+
+.snc-sanctum__diya--right {
+  right: 2%;
+}
+
+.snc-diya-pedestal {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 6px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Floating Sanctified Badge */
+.snc-sanctum__floating-badge {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(60px);
+  background: linear-gradient(135deg, rgba(46, 5, 13, 0.94) 0%, rgba(26, 2, 6, 0.96) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7), 0 0 15px rgba(212, 175, 55, 0.2);
+  border-radius: 30px;
+  padding: 0.45rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  font-family: var(--font-serif);
+  font-size: 0.76rem;
+  color: var(--gold-shimmer);
+  letter-spacing: 0.04em;
+  z-index: 30;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .snc-sanctum-wrapper {
+    max-width: 440px;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .snc-sanctum-wrapper {
+    max-width: 330px;
+  }
+  .snc-shrine-feather {
+    width: 105px;
+    height: 140px;
+  }
+  .snc-shrine-bansuri {
+    width: 190px;
+    height: 48px;
+  }
+  .snc-shrine-poshaak {
+    width: 220px;
+    height: 130px;
+  }
+  .snc-sanctum__diya--left {
+    left: -2%;
+  }
+  .snc-sanctum__diya--right {
+    right: -2%;
+  }
+  .snc-sanctum__floating-badge {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.8rem;
+    bottom: -12px;
+  }
+}
+
