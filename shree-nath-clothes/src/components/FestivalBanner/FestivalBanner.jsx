@@ -1,9 +1,9 @@
 ﻿import { useState } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
-import krishnaBanner from '../../../public/assets/images/explore/krishna_banner_hd.png?url';
-import collectionOne from '../../../public/assets/images/explore/collection_image_1_hd.png?url';
-import collectionTwo from '../../../public/assets/images/explore/collection_image_2_hd.png?url';
-import collectionThree from '../../../public/assets/images/explore/collection_image_3_hd.png?url';
+import krishnaBanner from '../../../public/assets/images/Explore/krishna_banner_hd.png?url';
+import collectionOne from '../../../public/assets/images/Explore/collection_image_1_hd.png?url';
+import collectionTwo from '../../../public/assets/images/Explore/collection_image_2_hd.png?url';
+import collectionThree from '../../../public/assets/images/Explore/collection_image_3_hd.png?url';
 import './FestivalBanner.css';
 
 const COLLECTION_IMAGES = [
